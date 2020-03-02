@@ -18,20 +18,29 @@ int main()
     intTree.insert(32);
     intTree.insert(22);
 
-    // Вывод узлов дерева в выходной поток
+//    Вывод узлов дерева в выходной поток
     intTree.print(cout);
-    
-//    // Поиск в дереве по ключу
-//    int keyFound = intTree.iterativeSearch(15); // поиск должен быть успешным
-//    cout << "Key " << 15 << (keyFound ? " found successfully" : " not found") << " in the tree" << endl;
 
-//    keyFound = intTree.iterativeSearch(23); // поиск должен быть неудачным
-//    cout << "Key " << 23 << (keyFound ? " found successfully" : " not found") << " in the tree" << endl;
+//    Поиск в дереве по ключу
+    int keyFound = intTree.iterativeSearch(15); // поиск должен быть успешным
+    cout << "Key " << 15 << (keyFound ? " found successfully" : " not found") << " in the tree" << endl;
 
-//    // определение высоты и количества узлов дерева
+    keyFound = intTree.iterativeSearch(23); // поиск должен быть неудачным
+    cout << "Key " << 23 << (keyFound ? " found successfully" : " not found") << " in the tree" << endl;
+
+//    определение высоты и количества узлов дерева
     cout << "height = " << intTree.getHeight() << endl;
-//    cout << "count = " << intTree.getCount () << endl;
+    cout << "count = " << intTree.getCount () << endl;
+
+//    обход узлов и вывод их в порядке возрастания
+    cout << "Inorder walk result: ";
+    intTree.inorderWalkPrint();
+    cout << endl;
     
-    return 0;
+    //   удаление элемента
+    //    intTree.deleteKey(20);
+    //    intTree.print(cout);
+    //    return 0;
+        
     
 }
